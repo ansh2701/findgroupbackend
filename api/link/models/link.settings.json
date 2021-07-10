@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "links",
+  "info": {
+    "name": "Link",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "category": {
+      "via": "links",
+      "model": "category"
+    },
+    "type": {
+      "via": "links",
+      "model": "type"
+    },
+    "click": {
+      "default": 0,
+      "type": "integer"
+    }
+  }
+}
